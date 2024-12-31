@@ -28,10 +28,10 @@ const NewsCard: React.FC<NewsCardProps> = ({
         />  
     </div>
     <div>
-      <div className="text-2xl font-bold py-4">{title}</div>
-      <div className="text-xl font-normal pb-4">{description}</div>
+      <div className="md:text-2xl text-base font-bold py-4">{title}</div>
+      <div className="md:text-xl text-xs font-normal pb-4">{description}</div>
     </div>
-      <Link href={url} target="_blank" rel="noopener noreferrer" className="text-[#ff0000]">
+      <Link href={url} target="_blank" rel="noopener noreferrer" className="text-[#ff0000] text-sm font-normal">
         Read more
       </Link>
       </div>

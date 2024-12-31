@@ -3,27 +3,115 @@
 
   :global {
     .ant-menu-horizontal {
-      display: flex;
-      justify-content: center;
-      border-bottom: none !important;
+        display: flex;
+        justify-content: center;
+      border-bottom: none !important; 
       border-top: 1px gray solid;
     }
-    .ant-menu-item:hover {
-      color: white !important;
+    .ant-menu-item:hover,
+    .ant-menu-subtitle:hover
+    {
+        color: white !important;
+        background-color: red !important;
+    }
+    .ant-menu-item-selected:hover{
+        color: white !important;
+
+    }
+    .ant-menu-submenu-active{
       background-color: red !important;
+      color:white !important;
     }
-    .ant-menu-item-selected {
+    .ant-menu-submenu-active:hover{
+        color:white !important;
+    }
+    .ant-menu-submenu-selected{
+      color:  white !important;
+    }
+   
+    .ant-menu-title-content:hover{
+        color: white !important;
+     }
+     .ant-menu-submenu-selected{
       color: white !important;
-      background-color: red !important;
-    }
-    .ant-menu-title-content:hover {
+     }
+     .ant-menu-title-content{
+        color: black !important;
+     }
+     .ant-menu-submenu-selected::after{
+        content: none !important;
+     }
+     .ant-menu-submenu:hover::after{
+    content: none !important;
+
+     }
+     .ant-menu-item::after{
+            content: none !important;
+
+     }
+     a:hover{
+        color: white !important;
+     }
+     .ant-menu-submenu-title:hover{
       color: white !important;
-    }
-    .ant-menu-item::after {
+     }
+    //  .anticon{
+    //   color: white !important;
+    //  }
+     .ant-menu-submenu-popup::before{
       content: none !important;
+     }
+     .ant-menu-submenu::after{
+      content: none !important;
+     }
+     .ant-menu-submenu-open::after{
+      content: none !important;
+     }
+  }
+}
+.menuItem{
+    :global {
+ 
+  .ant-menu-item-selected{
+    background-color: white !important;
+    color: red !important;
+  }
+  .ant-menu-item:not(.ant-menu-item-selected):active{
+    color: red !important;
+  }
+  .ant-menu-item:not(.ant-menu-item-selected):hover{
+    background-color: white !important;
+    color: red !important;
+  }
+}
+}
+
+.customMenuLeft {
+  background-color: white;
+  :global {
+    .ant-menu {
+      background-color: white !important;
+      color: black !important;
     }
-    a:hover {
-      color: white !important;
+    .ant-menu-submenu-title{
+      color: black !important;
+    }
+    .ant-menu-item {
+      display: flex;
+      align-items: center;
+      width: 260px;
+      border-width: 1px;
+      border-color: rgba(255, 255, 255, 0.05);
+      border-style: none;
+      color: black;
+      &:hover {
+        color: #ff0000 !important; 
+      }
+    }
+
+    .ant-menu-item-selected {
+      background: #ff0000 !important;
+      color: white !important; 
     }
   }
 }

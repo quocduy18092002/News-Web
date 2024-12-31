@@ -43,11 +43,11 @@ const SourceNews = ({ source }: { source: string }) => {
   }, [source]);
 
   return (
-    <div className="px-36 pb-20">
+    <div className="md:px-36 md:pb-20 px-10 pb-0">
       
-      <div className={`font-bold text-4xl uppercase pb-10`}>{source}</div>
+      <div className={`font-bold md:text-4xl uppercase pb-4 md:pb-10 text-lg`}>{source}</div>
       
-      <div className="grid grid-cols-2 gap-4 items-center justify-center">
+      <div className="md:grid md:grid-cols-2 flex flex-col gap-4 items-center justify-center">
         <div className="w-full h-full">
           {news[0] && (
             <div>
@@ -62,8 +62,8 @@ const SourceNews = ({ source }: { source: string }) => {
                   property="image"
                 />
               </Link>
-              <h1 className="font-semibold text-2xl text-start">{news[0].title}</h1>
-              <div className="font-normal text-sm text-start">{news[0].description}</div>
+              <h1 className="font-semibold text-lg md:text-2xl text-start">{news[0].title}</h1>
+              <div className="font-normal text-xs md:text-sm text-start">{news[0].description}</div>
               <div className="text-end font-light text-xs">{formatPublishedAt(news[0].publishedAt)}</div>
             </div>
           )}
@@ -98,7 +98,7 @@ const SourceNews = ({ source }: { source: string }) => {
               property="image"
             />
           </Link>
-          <h1 className="font-semibold text-xl text-start">{article.title}</h1>
+          <h1 className="font-semibold text-base md:text-xl text-start">{article.title}</h1>
           <div className="text-end font-light text-xs">
             {formatPublishedAt(article.publishedAt)}
           </div>
