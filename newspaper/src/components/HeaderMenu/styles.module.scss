@@ -1,0 +1,29 @@
+.customMenu {
+  width: 100%;
+
+  :global {
+    .ant-menu-horizontal {
+      display: flex;
+      justify-content: center;
+      border-bottom: none !important;
+      border-top: 1px gray solid;
+    }
+    .ant-menu-item:hover {
+      color: white !important;
+      background-color: red !important;
+    }
+    .ant-menu-item-selected {
+      color: white !important;
+      background-color: red !important;
+    }
+    .ant-menu-title-content:hover {
+      color: white !important;
+    }
+    .ant-menu-item::after {
+      content: none !important;
+    }
+    a:hover {
+      color: white !important;
+    }
+  }
+}
